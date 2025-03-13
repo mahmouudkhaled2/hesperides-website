@@ -4,6 +4,7 @@ const withNextIntl = createNextIntlPlugin({
   locales: ['ar', 'en'],
   defaultLocale: 'ar',
   localeDetection: false,
+  messagesDir: './src/i18n/messages',
 });
 
 const nextConfig = {

@@ -1,12 +1,12 @@
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin();
+const withNextIntl = createNextIntlPlugin({
+  locales: ['ar', 'en'],
+  defaultLocale: 'ar',
+  localeDetection: false,
+});
 
 const nextConfig = {
-  i18n: {
-    locales: ['ar', 'en'],
-    defaultLocale: 'ar',
-  },
   images: {
     remotePatterns: [
       {

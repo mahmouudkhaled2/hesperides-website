@@ -1,11 +1,13 @@
-import { withNextIntl } from 'next-intl/plugin';
+import createNextIntlPlugin from 'next-intl/plugin';
 
-const nextConfig = withNextIntl({
+const withNextIntl = createNextIntlPlugin({
   locales: ['ar', 'en'],
   defaultLocale: 'ar',
   localeDetection: false,
-  messagesDir: './src/i18n/messages', // تأكد أن هذا المسار موجود فعلاً
-})({
+  messagesDir: './src/i18n/messages',
+});
+
+const nextConfig = withNextIntl({
   images: {
     remotePatterns: [
       {
@@ -17,4 +19,3 @@ const nextConfig = withNextIntl({
 });
 
 export default nextConfig;
-
